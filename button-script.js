@@ -1,4 +1,4 @@
-ocument.getElementById('reset').addEventListener('click', function() {
+document.getElementById('reset').addEventListener('click', function() {
     money = parseFloat(0);
     localStorage.setItem('money', parseFloat(money));
     document.getElementById('money').textContent = localStorage.getItem('money') + "$";
