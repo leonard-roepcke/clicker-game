@@ -1,11 +1,18 @@
 document.getElementById('reset').addEventListener('click', function() {
-    money = parseFloat(0);
-    localStorage.setItem('money', parseFloat(money));
-    document.getElementById('money').textContent = localStorage.getItem('money') + "$";
+    let money = 0;
+    localStorage.setItem('money', money);
+    document.getElementById('money').textContent = money + "$";
 });
+
 document.getElementById('bank').addEventListener('click', function() {
-    var money = parseFloat(localStorage.getItem('money')) || 0;
+    let money = parseInt(localStorage.getItem('money')) || 0;
     money += 1;
-    localStorage.setItem('money', parseFloat(money));
-    document.getElementById('money').textContent = localStorage.getItem('money') + "$";
+    localStorage.setItem('money', money);
+    document.getElementById('money').textContent = money + "$";
 });
+
+// Beim Laden der Seite aktuellen Wert anzeigen
+window.onload = function() {
+    let money = parseInt(localStorage.getItem('money')) || 0;
+    document.getElementById('money').textContent = money + "$";
+};
