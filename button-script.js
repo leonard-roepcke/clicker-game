@@ -1,6 +1,5 @@
 ocument.getElementById('reset').addEventListener('click', function() {
-    var money = parseFloat(localStorage.getItem('money')) || 0;
-    money = 0;
+    money = parseFloat(0);
     localStorage.setItem('money', parseFloat(money));
     document.getElementById('money').textContent = localStorage.getItem('money') + "$";
 });
