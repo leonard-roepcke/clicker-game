@@ -14,7 +14,7 @@ document.getElementById('work').addEventListener('click', function() {
 // Beim Laden der Seite aktuellen Wert anzeigen
 window.onload = function() {
     let money = parseInt(localStorage.getItem('money')) || 0;
-    document.getElementById('money').stextContent = money + "$";
+    document.getElementById('money').textContent = money + "$";
 };
 document.getElementById('worker').addEventListener('click', function() {
     if (parseFloat(localStorage.getItem('money')) >= 10) {
@@ -29,5 +29,5 @@ document.getElementById('worker').addEventListener('click', function() {
 
 setInterval(function() {
     localStorage.setItem('money', (parseInt(localStorage.getItem('money')) || 0) + (parseInt(localStorage.getItem('worker')) || 0));
-    document.getElementById('money').textContent = (parseInt(localStorage.getItem('money')) || 0) + "$";
+    document.getElementById('money').textContent = money + "$";
 }, 1000);
