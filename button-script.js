@@ -28,6 +28,7 @@ document.getElementById('worker').addEventListener('click', function() {
 
 
 setInterval(function() {
-    localStorage.setItem('money', (parseInt(localStorage.getItem('money')) || 0) + (parseInt(localStorage.getItem('worker')) || 0));
+    let money = (parseInt(localStorage.getItem('money')) || 0) + (parseInt(localStorage.getItem('worker')) || 0);
+    localStorage.setItem('money', money);
     document.getElementById('money').textContent = money + "$";
 }, 1000);
