@@ -4,7 +4,7 @@ document.getElementById('reset').addEventListener('click', function() {
     document.getElementById('money').textContent = money + "$";
 });
 
-document.getElementById('bank').addEventListener('click', function() {
+document.getElementById('work').addEventListener('click', function() {
     let money = parseInt(localStorage.getItem('money')) || 0;
     money += 1;
     localStorage.setItem('money', money);
