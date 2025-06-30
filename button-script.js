@@ -14,5 +14,6 @@ document.getElementById('work').addEventListener('click', function() {
 // Beim Laden der Seite aktuellen Wert anzeigen
 window.onload = function() {
     let money = parseInt(localStorage.getItem('money')) || 0;
-    document.getElementById('money').textContent = money + "$";
+    document.getElementById('money').stextContent = money + "$";
 };
+
