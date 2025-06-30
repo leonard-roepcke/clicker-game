@@ -31,4 +31,4 @@ setInterval(function() {
     let money = (parseInt(localStorage.getItem('money')) || 0) + (parseInt(localStorage.getItem('worker')) || 0);
     localStorage.setItem('money', money);
     document.getElementById('money').textContent = money + "$";
-}, 100000);
+}, 100);
