@@ -28,5 +28,6 @@ document.getElementById('worker').addEventListener('click', function() {
 
 
 setInterval(function() {
-    localStorage.setItem('money', (parseInt(localStorage.getItem('money')) || 0) + (parseInt(localStorage.getItem('worker')) || 0));
+    localStorage.setItem('money', (parseInt(localStorage.getItem('money')) || 0) + 1);;
+    //localStorage.setItem('money', (parseInt(localStorage.getItem('money')) || 0) + (parseInt(localStorage.getItem('worker')) || 0));
 }, 1000);
