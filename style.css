@@ -8,19 +8,3 @@ button{
     justify-content: center;
     height: 100vh;
 }
-.container {
-  display: flex;
-  align-items: center; /* optional: vertikal zentrieren */
-  gap: 8px; /* Abstand zwischen Button und Text */
-}
-
-.parent {
-  text-align: center; /* Zentriert Inline-Elemente und Inline-Block-Elemente */
-}
-
-
-.button-wrapper {
-  display: inline-flex; /* Flexbox, aber als Inline-Block */
-  align-items: center;  /* vertikal zentriert */
-  gap: 8px;
-}
