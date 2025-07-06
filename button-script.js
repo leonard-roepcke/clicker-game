@@ -17,9 +17,9 @@ window.onload = function() {
     document.getElementById('money').textContent = money + "$";
 };
 document.getElementById('worker').addEventListener('click', function() {
-    if (parseFloat(localStorage.getItem('money')) >= 10) {
+    if (parseFloat(localStorage.getItem('money')) >= 100) {
         let money = parseInt(localStorage.getItem('money')) || 0;
-        money -= 10;
+        money -= 100;
         localStorage.setItem('money', money);
         document.getElementById('money').textContent = money + "$";
         localStorage.setItem('worker', (parseInt(localStorage.getItem('worker')) || 0) + 1);
@@ -28,7 +28,7 @@ document.getElementById('worker').addEventListener('click', function() {
 
 
 setInterval(function() {
-    let money = (parseInt(localStorage.getItem('money')) || 0) + (parseInt(localStorage.getItem('worker')) * 0.1 || 0);
+    let money = (parseInt(localStorage.getItem('money')) || 0) + (parseInt(localStorage.getItem('worker')) * 1 || 0);
     localStorage.setItem('money', money);
     document.getElementById('money').textContent = money + "$";
 }, 1000);
